@@ -2,6 +2,10 @@
 
 TEST_DIR='/var/tmp'
 
+# Start benchmarking after the spare resources are removed
+echo '>>> Sleeping for 10 seconds, to wait until spare resources are removed'
+sleep 10
+
 # Test write IOPS
 fio \
     --name=write_iops \
